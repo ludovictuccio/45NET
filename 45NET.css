@@ -1,0 +1,350 @@
+/* Réinitialisation des styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Alignement vertical des éléments enfants */
+}
+
+.logo {
+    width: 800px; /* Ajustez la largeur de l'image selon vos besoins */
+    height: auto; /* Ajuste la hauteur de l'image de manière proportionnelle */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 48px; /* Taille de la police */
+    font-weight: bold; /* Gras */
+    color: #fff; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    margin-bottom: 10px; /* Espacement en bas */
+}
+
+header h2 {
+    font-size: 24px; /* Taille de la police */
+    color: #ccc; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffd700; /* Couleur jaune lors du survol */
+}
+
+section {
+    padding: 50px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#hero {
+	text-align:center;
+	background-color: #dcdcdc;
+    padding: 20px 0;
+}
+/* Style pour la section "Contact" */
+#contact-info {
+    background-color: #eaeaea; /* Couleur de fond */
+    padding: 50px 0; /* Espacement intérieur */
+}
+
+/* Style pour les titres de section */
+section h2 {
+    margin-bottom: 30px; /* Espacement en bas des titres */
+    color: #333; /* Couleur du texte pour les titres */
+    text-align: center; /* Centrage des titres */
+}
+
+/* Style pour les détails de contact */
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style pour chaque détail de contact */
+.contact-detail {
+    flex: 1;
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
+}
+
+#deplacements{
+	background-color: #dcdcdc;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#services {
+    background-color:  #eaeaea; /* Fond gris clair pour la section "Services" */
+    color: #333; /* Texte gris foncé pour la section "Services" */
+    padding: 50px; /* Espacement */
+}
+
+/* Style pour les titres de section "Services" */
+#services h2 {
+    margin-bottom: 30px; /* Espacement en bas des titres */
+    color: #333; /* Couleur du texte pour les titres */
+    text-align: center; /* Centrage des titres */
+}
+
+/* Style pour chaque service */
+.service {
+    text-align: center; /* Centrage du contenu */
+    margin-bottom: 30px; /* Espacement entre les services */
+}
+
+/* Style pour les titres de service */
+.service h3 {
+    font-size: 24px; /* Taille de la police pour les titres */
+    color: #333; /* Couleur du texte pour les titres */
+}
+
+/* Style pour les descriptions de service */
+.service p {
+    font-size: 16px; /* Taille de la police pour les descriptions */
+    color: #666; /* Couleur du texte pour les descriptions */
+    margin-top: 10px; /* Espacement supplémentaire au-dessus des descriptions */
+}
+
+
+.contact {
+	background-color: #dcdcdc;
+    padding: 50px 0;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact .form-group {
+    margin-bottom: 20px;
+}
+
+.contact label {
+    font-weight: bold;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#about {
+    background-color:  #eaeaea; /* Couleur de fond */
+    padding: 50px; /* Espacement intérieur */
+    border-radius: 10px; /* Bord arrondi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    text-align: center; /* Centrer le contenu */
+}
+
+#about h2 {
+    font-size: 36px; /* Taille du titre */
+    margin-bottom: 30px; /* Espacement en bas du titre */
+    color: #333; /* Couleur du texte du titre */
+}
+
+#about p {
+    font-size: 18px; /* Taille du texte */
+    line-height: 1.6; /* Hauteur de ligne */
+    margin-bottom: 20px; /* Espacement en bas du paragraphe */
+    color: #666; /* Couleur du texte */
+}
+
+#about .schedule {
+    margin-bottom: 10px; /* Espacement entre les horaires */
+}
+
+#about .schedule .day {
+    font-family: Arial, sans-serif; /* Police de caractères */
+    font-size: 18px; /* Taille du texte */
+    color: #333; /* Couleur du texte */
+    font-weight: bold; /* Mettre en gras le jour */
+}
+
+#about .schedule .hours {
+    font-family: Arial, sans-serif; /* Police de caractères */
+    font-size: 16px; /* Taille du texte */
+    color: #666; /* Couleur du texte */
+    margin-top: 5px; /* Espacement entre le jour et les horaires */
+}
+
+
+#about .schedule span {
+   /* Afficher chaque jour sur une ligne différente */
+    width: 150px; /* Largeur fixe pour aligner les jours */
+    padding-left: 20px; /* Ajouter une tabulation avant les heures */
+}
+
+#about .schedule span:last-child {
+    font-weight: bold; /* Mettre en gras le statut (ouvert/fermé) */
+}
+
+#about p:last-child {
+    margin-bottom: 0; /* Supprime l'espacement en bas du dernier paragraphe */
+}
+
+#photo_flottante {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+#lien_insta{
+    width: 50px;
+    height: auto;
+    display: inline-block;
+     margin: 0 10px;
+}
+
+#lien_tiktok {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+footer .container p {
+    margin: 0;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+}
+
+footer .social-icons img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.2);
+}
+
+footer #copyright {
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff; /* Couleur du texte */
+    font-size: 14px; /* Taille de la police */
+    font-style: italic; /* Style de police italique */
+    margin-top: 20px; /* Espacement par rapport aux éléments au-dessus */
+}
+
+
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .social-icons {
+        margin-bottom: 10px;
+    }
+}
+
+
+

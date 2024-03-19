@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	    <meta charset="utf-8" />
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="./45NET.css" />
+	    <title>45NET</title>
+		<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=ArisYpVHG-7kW0JE9JPaSf8LJ0A6GEUmudzG4J4QWDcd_s0AtQ5n1ORO91H_oCyM&callback=initMap' async defer></script>
+	    <script type="text/javascript" src="map.js"></script>
+	</head>
+	<body>
+	
+		<header>
+			<div class="container">
+				<h1>45NET</h1>
+				<h2>PROPRETE - SERVICES</h2>
+				<nav>
+					<ul>
+						<li><a href="#hero">Présentation</a></li>
+						<li><a href="#services">Nos services</a></li>
+						<li><a href="#deplacements">Déplacements</a></li>
+						<li><a href="#about">Horaires</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#follow">Suivez-nous</a></li>
+					</ul>
+				</nav>
+				  <div class="logo-container">
+				<img src="./images/288.png" alt="Logo" class="logo">
+        </div>
+			</div>
+		</header>
+				
+		<section id="hero">			
+			<div class="bienvenue">
+				<h2>Qui sommes-nous ?</h2>
+				<p>Nous sommes 45NET, une entreprise professionnelle de nettoyage, offrant des services de qualité pour les particuliers et les entreprises.</p>
+			</div>				
+		</section>
+	
+
+
+		<section id="services">
+			<div class="container">
+				<h2>Nos services</h2>
+				<div class="service">
+					<h3>Nettoyage résidentiel</h3>
+					<p>Nous proposons un nettoyage complet et efficace pour votre maison.</p>
+				</div>
+				<div class="service">
+					<h3>Nettoyage commercial</h3>
+					<p>Nous fournissons des services de nettoyage professionnels pour les bureaux et les entreprises.</p>
+				</div>
+				<div class="service">
+					<h3>Nettoyage spécialisé</h3>
+					<p>Nous sommes équipés pour les tâches de nettoyage spéciales telles que le nettoyage après sinistre ou le nettoyage de fin de chantier.</p>
+				</div>
+			</div>
+		</section>
+		
+		<section id="deplacements">
+			<div class="container">
+				<h2>Zones d'intervention</h2>
+				<div class="deplacement">
+					<p>Nous intervenons sur tout le département du Loiret (45)</p>
+					<!-- Intégration de la carte Google Maps -->
+					<div id="map" style="width: 100%; height: 400px;"></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about">
+			<div class="container">
+				<h2>Horaires d'ouverture</h2>
+				<div class="schedule">
+					<div class="day">Lun – Sam</div>
+					<div class="hours">08h00 – 17h00</div>
+				</div>
+				<div class="schedule">
+					<div class="day">Dim</div>
+					<div class="hours">Fermé</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="contact" class="contact">
+			<div class="container">
+				<h1>Contactez-nous</h1>
+				<form id="contact-form">
+					<div class="form-group">
+						<label for="nom">Nom*</label>
+						<input type="text" id="nom" name="nom" required>
+					</div>
+					<div class="form-group">
+						<label for="email">E-mail*</label>
+						<input type="email" id="email" name="email" required>
+					</div>
+					<div class="form-group">
+						<label for="message">Message*</label>
+						<textarea id="message" name="message" rows="4" required></textarea>
+					</div>
+					 <div class="form-group">
+						<input type="checkbox" id="consent" required>
+						<label for="consent">J'accepte que ces données soient stockées et traitées dans le but d'établir un contact. Je suis conscient que je peux révoquer mon consentement à tout moment.*</label>
+					</div>
+					<div class="form-group">
+						<button type="submit">Envoyer</button>
+					</div>
+					<div class="info">
+						<h4>* Indique les champs obligatoires</h4>
+					</div>
+				</form>
+			</div>
+		</section>
+		
+
+		<section id="contact-info">
+			<div class="container">
+				<h2>Informations de contact</h2>
+				<div class="contact-details">
+					<div class="contact-detail">
+						<strong>Téléphone :</strong> 06 35 33 88 90
+					</div>
+					<div class="contact-detail centered">
+						<strong>E-mail :</strong> 45nettoyage@gmail.com
+					</div>
+					<div class="contact-detail">
+						<strong>Adresse :</strong> 24 Quai Saint-Laurent, 45000 Orléans, France
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+		<script>
+			(function(){
+				emailjs.init("T6TwWiKB4HR-wr8Uq"); // Remplacez YOUR_USER_ID_HERE par votre User ID EmailJS
+				
+				document.getElementById('contact-form').addEventListener('submit', function(event) {
+					event.preventDefault();
+					// Envoi de l'e-mail via EmailJS
+					emailjs.sendForm('service_jy9mmr1', 'template_9djms1d', this)
+						.then(function(response) {
+							console.log('Succès !', response.status, response.text);
+							alert('Votre message a été envoyé avec succès.');
+						}, function(error) {
+							console.log('Échec !', error);
+							alert('Une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer.');
+						});
+				});
+			})();
+		</script>
+
+		<footer>
+			<div id="follow" class="container">  
+				<p>Rejoignez-nous sur les réseaux sociaux :</p>
+				<div class="social-icons">
+					<a href="https://www.instagram.com/45nettoyage/" title="Suivez-nous sur Instagram" target="_blank">
+						<img src="./images/insta.webp" id="lien_insta" alt="Instagram">
+					</a>
+					<a href="https://www.tiktok.com/@45nettoyage/" title="Suivez-nous sur TikTok" target="_blank">
+						<img src="./images/tiktoknoir.png" id="lien_tiktok" alt="TikTok">
+					</a>
+				</div>
+				<p>Restez informés de nos dernières actualités !</p>			
+			</div>
+			<div id="copyright" class="container"> 
+				<p>Copyright. Tous droits réservés.</p>
+			</div>
+		</footer>
+
+	</body>
+</html>

@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+	padding: 10px 10;
 }
 
 body {
@@ -80,7 +81,7 @@ section {
 #hero {
 	text-align:center;
 	background-color: #dcdcdc;
-    padding: 20px 0;
+    padding: 20px 10;
 }
 
 /* Style pour les titres de section */
@@ -91,6 +92,7 @@ section h2 {
 }
 
 /* Pour la section "Contact" */
+@media screen and (min-width: 768px){
 #contact-info {
     background-color: #eaeaea; /* Couleur de fond */
     padding: 50px 0; /* Espacement intérieur */
@@ -108,6 +110,7 @@ section h2 {
     flex: 1;
     text-align: center;
 }
+}
 
 /* Media query pour ajuster le comportement sur les écrans plus petits */
 @media (max-width: 768px) {
@@ -119,13 +122,17 @@ section h2 {
     /* Pour chaque détail de contact */
     .contact-detail {
         flex-basis: 100%; /* Occuper toute la largeur sur une seule colonne */
+        text-align: left;
     }
-}
 
-
-
-.centered {
-    text-align: center;
+    /* Pour les parties avant et après les ":" */
+    .contact-detail strong {
+        display: block; /* Afficher sur une nouvelle ligne */
+    }
+	/* Pour les parties avant et après les ":" */
+    .contact-detail p {
+         text-align: left;
+    }
 }
 
 #deplacements{

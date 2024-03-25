@@ -82,11 +82,6 @@ section {
 	background-color: #dcdcdc;
     padding: 20px 0;
 }
-/* Style pour la section "Contact" */
-#contact-info {
-    background-color: #eaeaea; /* Couleur de fond */
-    padding: 50px 0; /* Espacement intérieur */
-}
 
 /* Style pour les titres de section */
 section h2 {
@@ -95,17 +90,39 @@ section h2 {
     text-align: center; /* Centrage des titres */
 }
 
-/* Style pour les détails de contact */
+/* Pour la section "Contact" */
+#contact-info {
+    background-color: #eaeaea; /* Couleur de fond */
+    padding: 50px 0; /* Espacement intérieur */
+}
+
+/* Pour les détails de contact */
 .contact-details {
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap; /* Empêcher le retour à la ligne par défaut */
 }
 
-/* Style pour chaque détail de contact */
+/* Pour chaque détail de contact */
 .contact-detail {
     flex: 1;
     text-align: center;
 }
+
+/* Media query pour ajuster le comportement sur les écrans plus petits */
+@media (max-width: 768px) {
+    /* Pour les détails de contact */
+    .contact-details {
+        flex-wrap: wrap; /* Permettre le retour à la ligne sur les écrans plus petits */
+    }
+
+    /* Pour chaque détail de contact */
+    .contact-detail {
+        flex-basis: 100%; /* Occuper toute la largeur sur une seule colonne */
+    }
+}
+
+
 
 .centered {
     text-align: center;

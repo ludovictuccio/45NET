@@ -112,26 +112,37 @@ section h2 {
 }
 }
 
-/* Media query pour ajuster le comportement sur les écrans plus petits */
-@media (max-width: 768px) {
+/* Pour la section "Contact" */
+@media screen and (max-width: 768px){
+    #contact-info {
+        background-color: #eaeaea; /* Couleur de fond */
+        padding: 0px 0; /* Espacement intérieur */
+    }
+
     /* Pour les détails de contact */
     .contact-details {
-        flex-wrap: wrap; /* Permettre le retour à la ligne sur les écrans plus petits */
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
     }
 
     /* Pour chaque détail de contact */
     .contact-detail {
-        flex-basis: 100%; /* Occuper toute la largeur sur une seule colonne */
-        text-align: left;
+        flex: 1;
+        text-align: center;
     }
 
-    /* Pour les parties avant et après les ":" */
-    .contact-detail strong {
-        display: block; /* Afficher sur une nouvelle ligne */
+    /* Pour ajuster la mise en page sur les grands écrans */
+    .contact-detail:nth-child(1),
+    .contact-detail:nth-child(2) {
+        flex-basis: 50%; /* Occuper 50% de la largeur sur les grands écrans */
     }
-	/* Pour les parties avant et après les ":" */
-    .contact-detail p {
-         text-align: left;
+
+    /* Pour le troisième détail de contact */
+    .contact-detail:nth-child(3) {
+        flex-basis: 100%; /* Occuper 100% de la largeur sur les grands écrans */
+        text-align: center; /* Centrer le texte */
+        margin-top: 20px; /* Espacement entre les blocs */
     }
 }
 
@@ -144,7 +155,7 @@ section h2 {
 #services {
     background-color:  #eaeaea; /* Fond gris clair pour la section "Services" */
     color: #333; /* Texte gris foncé pour la section "Services" */
-    padding: 50px; /* Espacement */
+    padding: 20px; /* Espacement */
 }
 
 /* Style pour les titres de section "Services" */
@@ -159,21 +170,12 @@ section h2 {
     text-align: center; /* Centrage du contenu */
     margin-bottom: 30px; /* Espacement entre les services */
 }
-
-/* Style pour les titres de service */
-.service h3 {
-    font-size: 24px; /* Taille de la police pour les titres */
-    color: #333; /* Couleur du texte pour les titres */
-}
-
 /* Style pour les descriptions de service */
 .service p {
     font-size: 16px; /* Taille de la police pour les descriptions */
     color: #666; /* Couleur du texte pour les descriptions */
     margin-top: 10px; /* Espacement supplémentaire au-dessus des descriptions */
 }
-
-
 .contact {
 	background-color: #dcdcdc;
     padding: 50px 0;

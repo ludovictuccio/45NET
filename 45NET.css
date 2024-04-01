@@ -25,14 +25,18 @@ body {
 }
 
 .logo {
-    width: 800px; /* Ajustez la largeur de l'image selon vos besoins */
+    width: 500px; /* Ajustez la largeur de l'image selon vos besoins */
     height: auto; /* Ajuste la hauteur de l'image de manière proportionnelle */
 }
 
 header {
-    background-color: #333;
     color: #fff;
-    padding: 20px 0;
+	 padding: 150px 20px;
+	background-image: url('./images/45net3.png');
+	background-color: #c1c1d7; /* Couleur bleu ciel */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-size: contain; /* Ajuste la taille de l'image pour s'adapter à la fenêtre du navigateur */
+    background-position: center;
 }
 
 header h1 {

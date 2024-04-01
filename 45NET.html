@@ -12,8 +12,6 @@
 	
 		<header>
 			<div class="container">
-				<h1>45NET</h1>
-				<h2>PROPRETE - SERVICES</h2>
 				<nav>
 					<ul>
 						<li><a href="#hero">Présentation</a></li>
@@ -24,8 +22,7 @@
 						<li><a href="#follow">Suivez-nous</a></li>
 					</ul>
 				</nav>
-				  <div class="logo-container">
-				<img src="./images/288.png" alt="Logo" class="logo">
+				
         </div>
 			</div>
 		</header>
@@ -33,22 +30,18 @@
 		<section id="hero">			
 			<div class="bienvenue">
 				<h2>Qui sommes-nous ?</h2>
-				<p>Nous sommes 45NET, une entreprise professionnelle de nettoyage, offrant des services de qualité pour les particuliers et les entreprises.</p>
+				<p>45NET est une entreprise de nettoyage spécialisée dans la remise en état des fin des chantiers pour particuliers et professionnels, à votre service sur Orléans et sur la région Centre-val-loire.</p>
 			</div>				
 		</section>
 	
-
-
 		<section id="services">
 			<div class="container">
-				<h2>Nos services</h2>
+				<h2>Notre expertise</h2>
 				<div class="service">
-					<h3>Nettoyage commercial</h3>
-					<p>Nous fournissons des services de nettoyage professionnels pour les bureaux et les entreprises.</p>
-				</div>
-				<div class="service">
-					<h3>Nettoyage spécialisé</h3>
-					<p>Nous sommes équipés pour les tâches de nettoyage spéciales telles que le nettoyage après sinistre ou le nettoyage de fin de chantier.</p>
+					<h3>Le nettoyage de fin de chantier</h3>
+					<p>Une prestation de nettoyage et de remise en état de fin de chantier doit être bien préparée afin que le site soit opérationnel dans les plus brefs délais dès que les travaux sont terminés.</p>
+					<p>Nous accordons une très grande importance au suivi de nos différentes prestations.</p>
+					<p>A l’écoute des collaborateurs, assure des visites sur site régulières afin de garder une proximité directe avec nos équipes et leurs travaux. Cela nous permet d’assurer un niveau de qualité optimal lors de la livraison des sites, propres et sains.</p>
 				</div>
 			</div>
 		</section>
@@ -58,7 +51,6 @@
 				<h2>Zones d'intervention</h2>
 				<div class="deplacement">
 					<p>Nous intervenons sur tout le département du Loiret (45)</p>
-					<!-- Intégration de la carte Google Maps -->
 					<div id="map" style="width: 100%; height: 400px;"></div>
 				</div>
 			</div>
@@ -131,12 +123,12 @@
 	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 		<script>
 			(function(){
-				emailjs.init("T6TwWiKB4HR-wr8Uq"); // Remplacez YOUR_USER_ID_HERE par votre User ID EmailJS
+				emailjs.init("j4SkUykyCsEcUzBoV"); // Remplacez YOUR_USER_ID_HERE par votre User ID EmailJS
 				
 				document.getElementById('contact-form').addEventListener('submit', function(event) {
 					event.preventDefault();
 					// Envoi de l'e-mail via EmailJS
-					emailjs.sendForm('service_jy9mmr1', 'template_9djms1d', this)
+					emailjs.sendForm('service_8sim47p', 'template_u560sve', this)
 						.then(function(response) {
 							console.log('Succès !', response.status, response.text);
 							alert('Votre message a été envoyé avec succès.');

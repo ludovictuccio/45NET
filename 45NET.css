@@ -1,4 +1,3 @@
-/* Réinitialisation des styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -29,15 +28,36 @@ body {
     height: auto; /* Ajuste la hauteur de l'image de manière proportionnelle */
 }
 
+
+@media (max-width: 768px) {
 header {
+    margin-bottom: 20px;
     color: #fff;
-	 padding: 150px 20px;
-	background-image: url('./images/45net3.png');
-	background-color: #c1c1d7; /* Couleur bleu ciel */
+    padding: 180px 20px 0;
+    background-image: linear-gradient(to bottom, #293c5b, #469bbd,#293c5b);
+    background-image: url('./images/45net3.png'), linear-gradient(to bottom, #293c5b, #469bbd,#293c5b); /* Superposer l'image de fond avec le dégradé */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-size: contain; /* Ajuste la taille de l'image pour s'adapter à la fenêtre du navigateur */
     background-position: center;
+    display: flex; /* Utilisation de flexbox */
+    align-items: flex-end; /* Aligner le contenu en bas */
 }
+    }
+@media (min-width: 768px) {	
+header {
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 180px 20px 0;
+    background-image: linear-gradient(to bottom, #293c5b, #469bbd,#293c5b);
+    background-image: url('./images/45net3.png'), linear-gradient(to bottom, #293c5b, #469bbd,#293c5b); /* Superposer l'image de fond avec le dégradé */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-size: auto; /* Ajuste la taille de l'image pour s'adapter à la fenêtre du navigateur */
+    background-position: center;
+    display: flex; /* Utilisation de flexbox */
+    align-items: flex-end; /* Aligner le contenu en bas */
+}
+}
+
 
 header h1 {
     font-size: 48px; /* Taille de la police */
@@ -53,7 +73,6 @@ header h2 {
     text-align: center; /* Centrage du texte */
     margin-bottom: 20px; /* Espacement en bas */
 }
-
 
 header nav ul {
     list-style-type: none;
@@ -75,6 +94,8 @@ header nav ul li a:hover {
     color: #ffd700; /* Couleur jaune lors du survol */
 }
 
+
+
 section {
     padding: 50px;
     margin-bottom: 30px;
@@ -88,7 +109,6 @@ section {
     padding: 20px 10;
 }
 
-/* Style pour les titres de section */
 section h2 {
     margin-bottom: 30px; /* Espacement en bas des titres */
     color: #333; /* Couleur du texte pour les titres */
@@ -162,11 +182,9 @@ section h2 {
     padding: 20px; /* Espacement */
 }
 
-/* Style pour les titres de section "Services" */
-#services h2 {
-    margin-bottom: 30px; /* Espacement en bas des titres */
-    color: #333; /* Couleur du texte pour les titres */
+#services h4 {
     text-align: center; /* Centrage des titres */
+	  margin-top: 20px; /
 }
 
 /* Style pour chaque service */
@@ -179,6 +197,7 @@ section h2 {
     font-size: 16px; /* Taille de la police pour les descriptions */
     color: #666; /* Couleur du texte pour les descriptions */
     margin-top: 10px; /* Espacement supplémentaire au-dessus des descriptions */
+	 text-align: left;
 }
 .contact {
 	background-color: #dcdcdc;

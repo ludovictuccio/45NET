@@ -28,8 +28,8 @@ body {
     height: auto; /* Ajuste la hauteur de l'image de manière proportionnelle */
 }
 
-
-@media (max-width: 768px) {
+/*Telephones*/
+@media (max-width: 480px) {
 header {
     margin-bottom: 20px;
     color: #fff;
@@ -38,10 +38,40 @@ header {
     background-image: url('./images/45net3.png'), linear-gradient(to bottom, #293c5b, #469bbd,#293c5b); /* Superposer l'image de fond avec le dégradé */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-size: contain; /* Ajuste la taille de l'image pour s'adapter à la fenêtre du navigateur */
-    background-position: center;
+    background-position: top;
+    display: grid; /* Utilisation de flexbox */
+    align-items: flex-end; /* Aligner le contenu en bas */
+        justify-content: center; /* Aligner le contenu au centre horizontalement */
+        text-align: center; /* Centrer le texte */
+}
+
+header nav ul li {
+    display: grid;
+    margin-right: 10px;
+	margin-bottom: 30px;
+}
+
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+header {
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 180px 20px 0;
+    background-image: linear-gradient(to bottom, #293c5b, #469bbd,#293c5b);
+    background-image: url('./images/45net3.png'), linear-gradient(to bottom, #293c5b, #469bbd,#293c5b); /* Superposer l'image de fond avec le dégradé */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-size: contain; /* Ajuste la taille de l'image pour s'adapter à la fenêtre du navigateur */
+    background-position: top;
     display: flex; /* Utilisation de flexbox */
     align-items: flex-end; /* Aligner le contenu en bas */
 }
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
     }
 @media (min-width: 768px) {	
 header {
@@ -56,8 +86,12 @@ header {
     display: flex; /* Utilisation de flexbox */
     align-items: flex-end; /* Aligner le contenu en bas */
 }
-}
 
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+}
 
 header h1 {
     font-size: 48px; /* Taille de la police */
@@ -79,10 +113,7 @@ header nav ul {
     text-align: center;
 }
 
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+
 
 header nav ul li a {
     color: #fff;
@@ -93,8 +124,6 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #ffd700; /* Couleur jaune lors du survol */
 }
-
-
 
 section {
     padding: 50px;
@@ -115,21 +144,19 @@ section h2 {
     text-align: center; /* Centrage des titres */
 }
 
-/* Pour la section "Contact" */
 @media screen and (min-width: 768px){
 #contact-info {
     background-color: #eaeaea; /* Couleur de fond */
     padding: 50px 0; /* Espacement intérieur */
 }
 
-/* Pour les détails de contact */
 .contact-details {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap; /* Empêcher le retour à la ligne par défaut */
 }
 
-/* Pour chaque détail de contact */
+
 .contact-detail {
     flex: 1;
     text-align: center;
